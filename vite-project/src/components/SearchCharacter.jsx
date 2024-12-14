@@ -19,15 +19,19 @@ characters(filter:{name:$name}){
 export const SearchCharacter = () =>{
     const [characterToSearch,setCharacterToSearch] = useState("")
 
-    const [searchCharacterLazy, data]  = useLazyQuery(CHARACTER_TO_SEARCH,{
+    const [searchCharacterLazy, fetchingResponse]  = useLazyQuery(CHARACTER_TO_SEARCH,{
         variables:{
             name:characterToSearch
         }
     })
 
-    const {data:characters} = data
-    console.log(characters)
-    
+    const {data} = fetchingResponse
+
+    if(data){
+        const {results} = data.characters
+        console.log(results)
+     }
+
     return (<>
     <input type="text" name="" value={characterToSearch} onChange={(e)=>{setCharacterToSearch(e.target.value)}} />
 

@@ -1,6 +1,6 @@
 import './App.css'
 
-import {SearchCharacter} from './components/SearchCharacter'
+//import {SearchCharacter} from './components/SearchCharacter'
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
     <h1>Rick and Morty App</h1>
     <Characters/> */}
     {/* <Product/> */}
-    <SearchCharacter/>
+    {/* <SearchCharacter/> */}
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
