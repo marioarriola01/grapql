@@ -1,4 +1,4 @@
-import {gql,useQuery} from '@apollo/client'
+import {gql,useQuery, useMutation} from '@apollo/client'
 
 const QUERY_CHARACTER = gql`query($id:ID!) {
   character(id:$id){

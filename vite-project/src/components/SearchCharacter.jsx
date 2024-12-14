@@ -21,7 +21,11 @@ export const SearchCharacter = () =>{
 
     const [searchCharacterLazy, fetchingResponse]  = useLazyQuery(CHARACTER_TO_SEARCH,{
         variables:{
-            name:characterToSearch
+            title:"Product from the website",
+            price:15.00,
+            description:"Product description",
+            categoryId:2,
+            images:["https://placeimg.com/640/480/any"]
         }
     })
 

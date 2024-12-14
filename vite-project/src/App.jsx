@@ -1,4 +1,5 @@
 import './App.css'
+import {DeleteProduct} from './components/DeleteProduct'
 
 
 
@@ -6,6 +7,7 @@ function App() {
 
   return (
     <>
+    <DeleteProduct/>
     {/* <Character/>
     <h1>Rick and Morty App</h1>
     <Characters/> */}
