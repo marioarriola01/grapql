@@ -1,0 +1,16 @@
+describe('render the application complete',()=>{
+    it('should render the application', () => {
+        cy.visit('http://localhost:5173/')
+        cy.contains('Click on the Vite and React logos to learn more')
+        cy.get('[data-cy=counter]').click()
+        cy.get('[data-cy=counter]').click()
+        cy.get('[data-cy=counter]').click()
+        cy.get('[data-cy=counter]').click()
+        cy.get('[data-cy=counter]').click()
+        cy.contains('count is 5')
+        cy.get('[data-cy=username]').type('Mario')
+        cy.get('[data-cy=username]').should('have.value', 'Mario')
+        cy.get('[data-cy=username]').type('{backspace}{backspace}{backspace}')
+        cy.get('[data-cy=username]').should('have.value', 'Ma')
+    })
+})
